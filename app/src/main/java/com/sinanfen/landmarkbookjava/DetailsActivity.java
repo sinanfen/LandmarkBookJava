@@ -23,12 +23,12 @@ public class DetailsActivity extends AppCompatActivity {
 
 
 
-        Intent intent = getIntent();
+        //Intent intent = getIntent();
         //Casting
         //Landmark selectedLandmark = (Landmark) intent.getSerializableExtra("landmark");
         //Landmark selectedLandmark = chosenLandmark;
         Singleton singleton = Singleton.getInstance();
-        Landmark selectedLandmark = singleton.getSentLandmark();
+        Landmark selectedLandmark = singleton.getSelectedLandmark();
 
         binding.nameText.setText(selectedLandmark.name);
         binding.countryText.setText(selectedLandmark.country);

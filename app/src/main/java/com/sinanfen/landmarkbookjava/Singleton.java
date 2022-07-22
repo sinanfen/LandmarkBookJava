@@ -1,26 +1,31 @@
 package com.sinanfen.landmarkbookjava;
 
+import android.graphics.Bitmap;
+
 public class Singleton {
 
-    private Landmark sentLandmark;
+    private Landmark selectedLandmark;
     private static Singleton singleton;
 
-    private Singleton( ){
+    private Singleton() {
 
     }
 
-    public Landmark getSentLandmark(){
-        return sentLandmark;
+    public Landmark getSelectedLandmark() {
+        return selectedLandmark;
     }
 
-    public void setSentLandmark(Landmark setLandmark){
-        this.sentLandmark = sentLandmark;
+    public void setChosenLandmark(Landmark selectedLandmark) {
+        this.selectedLandmark = selectedLandmark;
     }
 
-    public static Singleton getInstance(){
-        if (singleton == null){
+    public static Singleton getInstance() {
+        if (singleton == null) {
             singleton = new Singleton();
         }
+
         return singleton;
+
     }
+
 }
